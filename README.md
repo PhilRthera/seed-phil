@@ -34,7 +34,9 @@ Technical Milestones :
 
           1.1.3.1/ Libraries
 
-            #1/ Jenthera library - Currently being made operational 
+            #1/ Jenthera library - Currently we operate 3 different protein scaffold libraries (linear peptide 7mers, Triple Helix and 
+            VHH). The latter two libraries are of our own internal design and were sequence validated 12-19th December. The basic screen 
+            approach is phage display with either solid phase or bead based protein display for each round of protein target screening. 
 
             #2/ Superhuman library - (Kruse library - access through digitalis, clarification of commercial use required)
             https://www.kerafast.com/product/3634/yeast-display-nanobody-library-nblib cost quotes is for academic use. 
@@ -54,6 +56,9 @@ Technical Milestones :
       
       1.1.5.1 Cost upper Bound: Commercial
                   For commerical screening assuming $9800 * 5 antigenic targets = $49000
+                  Additional cost is the antigenic protein purchase or inhouse expression which is dependent upon commercial 
+                  availability or internal vector generation & expression.
+                  
           
       1.1.5.2 Cost upper Bound: In House Screening (Kruse or Jenthera) Total = $20000 (plus protein production $2000 per Nuc-Nab)
                  Screening Consumables (mol.bio kits, biochemicals, recombinant proteins, plastic ware): $5000
@@ -64,15 +69,24 @@ Technical Milestones :
 
       1.1.6/ Staging/Operations : to be discussed with Phil 
               1.1.6.1 - Library set up - We are setting up the Jenthera screening in the dedicated Phage facility at Illumina
+                Libraries QA and screening starts 1st week of Jan
               1.1.6.2 - Selection of the 5 membrane associate targets based on the HLA/BRCA1 status - cross reference to RNA seq.
+                Dac to make selection of highest relevance, which will start the selection of screening approach. The other key variable 
+                is determining the selection of cells to use in testing. A clear positive control cell line should be shown expressing 
+                the target of interest and ideally the biology of interest relating the PARP resistance (BRCA background) if possible. \
+                Negative control cells should not have BRCA background nor receptor type targeted.
               1.1.6.3 - Performance of Screen with selectivity and biophysic characterisation. 
                           a) Sequencing: Determination of VHH sequences using iSeq/Nextera library sets
-                          b) Characterisation: ELISA/PhAb internalisation/FlowCT cell assay
+                          b) Characterisation: ELISA
+                                               PhAb internalisation (Target cells versus non targetted cells)
+                                               FlowCT cell assay
+                                               SPR Kd analysis (if applicable)
               1.1.6.4 - Pilot production as part of Nuclease-Nab system:
                           a) Clone into Nuc-Nab base expression vectors (double digest compatible classical cloning)
                           b) Cell-free expression for rapid validation of Vector performance
                           c) Ship to Prof Nagar for Pilot production for cellular gRNA:phenotype assays (Cost of production: 2000 
                           dollars per Nuc-Nab (5x10mg/ml) plus QA)
+                          d) QA Validation of internalisation & selectivity
 
     1.2/ guide RNAs
 
@@ -88,23 +102,41 @@ Technical Milestones :
 
               Discussions have identified a limited subset of targets relevant to PARP resistance and recovery. 
               Currently the minimal target list is :
+                
                 Rad52 - Sullivan-Reed et al., 2018, Cell Reports 23, 3127–3136June 12, 2018 ª 2018 The
                         Author(s).https://doi.org/10.1016/j.celrep.2018.05.034
                 Myc - Synthetic Lethality of PARP Inhibitors in Combination with MYC Blockade Is Independent of BRCA Status in Triple-
                       Negative Breast CancerJason. P.W. Carey,
-                Rad51 - Upregulation appears key to all methods of ParpI resistance observed in PDX 
+                Rad51 - Rad51 - as Discussed, inclusive of Rad paraloguesUpregulation appears key to all methods of ParpI resistance 
+                observed in PDX 
                         https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5961353/figure/mdy099-F1/
                         
-                ATR - Inhibitions disrupts re-wired HDR alternative pathways Genes Dev. 2017 Feb 1;31(3):318-332. doi: 
+                ATR - Inhibitions disrupts re-wired HDR alternative pathways, stabilisation of replication fork Genes Dev. 2017 Feb 
+                1;31(3):318-332. doi: 
                       10.1101/gad.290957.116. Epub 2017 Feb 27
                       
                 PDL1- for Dac's Evaluation - Discussed last conversation.
                 
-                Targets chosen based on the evaluation that Rad52 ablation combined with ParpI leads to dual synthetic lethality. 
-                In the context of Parp resistance, Rad52 ablation undermines the HDR mechanism. The other high potential targets are 
-                rad51 a related member of the HDR mechanary to Rad52 and the MYC promoter which regulates components of HDR pathway and 
-                Rad family members as part of DNA repair in BRCA1/2 & TNBC. MYC 
-                blockades demonstrate SL with parpI irrespective of BRCA status.  
+                mi622 - cell line evidence as being up regulated in BRCA mutant background leading to PARP inhibition. Leading to 
+                platinium and parp resistance 
+                NC_000013.11:90231167-90231290 Homo sapiens chromosome 13, GRCh38.p13 Primary Assembly
+                GGCTGGGAAGAACCGAGAGAAGCTGGACAAGTACTGGTCTCAGCAGATTGAGGAGAGCACCACAGTGGT
+                ATCACACAGTCTGCTGAGGTTGGAGCTGCTGAGATGACACTCACGGAGCTGAGA
+                https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4731274/ Observed in Patient cohorts as well as cell lines. 
+                MIR have influence upon HR component regulation other MIR have been cited as influencing PARP resistance miR-644, miR-
+                492, miR-613, miR-577, miR-622 and miR-126* https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4031983/?report=reader
+                In the landscape of alternative target MIR provide additional viable target as they relate to the same protein targets 
+                posited above. 
+                
+                
+                NHEJ targets have been suggested for alternative PARPi escape mechanisms but to my knowledge none are observed in 
+                clinical reports. E
+                
+                Targets chosen based on the evaluation that Rad52/51 ablation combined with ParpI leads to dual synthetic lethality. 
+                In the context of Parp resistance, Rad52/51 ablation undermines the HDR mechanism. The other high potential targets are 
+                rad51 a related member of the HDR mechanary to Rad52/51 and the MYC promoter which regulates components of HDR pathway 
+                and Rad family members as part of DNA repair in BRCA1/2 & TNBC. 
+                MYC blockades demonstrate SL with parpI irrespective of BRCA status.  
                 Rad51 upregulation occurs and foci detected in all cases of ParpI escape and ATR influences Rad51 leading hence disrupts 
                 alt HDR.
                 Point for discussion with DAC - BRCA1/2 hypermorphs and upregulation - semi functional BRCA muts upregulated enables 
